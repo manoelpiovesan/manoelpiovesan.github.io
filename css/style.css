@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'sfproregular';
+    src: url(fonts/SFPRODISPLAYREGULAR.OTF);
+}
+@font-face {
+    font-family: 'sfproblackitalic';
+    src: url(fonts/SFPRODISPLAYBLACKITALIC.OTF);
+}
+@font-face {
+    font-family: 'sfprobold';
+    src: url(fonts/SFPRODISPLAYBOLD.OTF);
+}
+@font-face {
+    font-family: 'sfpromedium';
+    src: url(fonts/SFPRODISPLAYMEDIUM.OTF);
+}
+
+@font-face {
+    font-family: 'techmono';
+    src: url(fonts/ShareTechMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'mozart';
+    src: url(fonts/mozart.ttf);
+}
+
+/* 
+///
+///
+/// 
+///
+ */
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'sfproregular';
+    
+}
+
+body{
+    
+    background-image: url('../assets/images/bg.jpg');
+    background-size: cover;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window{
+    width: 65vw;
+    height: 80vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/*
+///
+///
+///
+///
+ */

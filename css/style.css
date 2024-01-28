@@ -1,27 +1,27 @@
 @font-face {
-    font-family: 'sfproregular';
+    font-family: "sfproregular";
     src: url(fonts/SFPRODISPLAYREGULAR.OTF);
 }
 @font-face {
-    font-family: 'sfproblackitalic';
+    font-family: "sfproblackitalic";
     src: url(fonts/SFPRODISPLAYBLACKITALIC.OTF);
 }
 @font-face {
-    font-family: 'sfprobold';
+    font-family: "sfprobold";
     src: url(fonts/SFPRODISPLAYBOLD.OTF);
 }
 @font-face {
-    font-family: 'sfpromedium';
+    font-family: "sfpromedium";
     src: url(fonts/SFPRODISPLAYMEDIUM.OTF);
 }
 
 @font-face {
-    font-family: 'techmono';
+    font-family: "techmono";
     src: url(fonts/ShareTechMono-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'mozart';
+    font-family: "mozart";
     src: url(fonts/mozart.ttf);
 }
 
@@ -32,13 +32,17 @@
 ///
  */
 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'sfproregular';
+ }
 html,body{
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    
-    font-family: 'sfproregular';
     
 }
 
@@ -46,6 +50,7 @@ body{
     
     background-image: url('../assets/images/bg.jpg');
     background-size: cover;
+    font-family: "sfproregular";
 }
 
 .main{
@@ -61,11 +66,186 @@ body{
 .window{
     width: 65vw;
     height: 80vh;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    
+}
+
+.sidebar{
+    height: 80vh;
+    backdrop-filter: blur(10px); 
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+
+    background-color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.75);
+}
+
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+.page{
     background-color: white;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+    
+}
+
+.page-header{
+    background-color: #f9fafc;
+    height: 10%;
+    border-bottom: 1px solid #e3e4e5;
+    font-family: 'sfproregular';
+    border-top-right-radius: 12px;
     display: flex;
     align-items: center;
-    justify-content: center;
+
 }
+
+.page-body{
+    background-color: #fff;
+    height: 84%;
+    padding: 1rem;
+
+}
+
+.page-footer{
+    background-color: #f9fafc;
+    height: 6%;
+    border-top: 1px solid #e3e4e5;
+    border-bottom-right-radius: 12px;
+    padding-left: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #828282;
+
+
+}
+
+.col-9{
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-header{
+    align-items: center;
+    height: 10%;
+    display: flex;
+    font-family: 'sfproregular';
+    padding-left: 0.75rem;
+
+}
+
+.sidebar-topics{
+    height: 90%;
+    font-family: 'sfproregular';
+}
+
+.topic-item{
+    height: 2rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    font-family: 'sfproregular';
+    color: #363636;
+    margin-bottom: 0.1rem;
+    cursor: pointer;
+}
+
+.topic-title{
+    height: 2rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem;
+    font-family: 'sfprobold';
+    color: #868c8c;
+    margin-bottom: 0.1rem;
+}
+
+.topic-item-icon{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.65rem;
+    filter: invert(30%) sepia(97%) saturate(2384%) hue-rotate(197deg) brightness(97%) contrast(81%);
+}
+
+
+.circle-red, .circle-green, .circle-yellow{
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.page-arrow{
+    width: 2.5rem;
+    height: 2.5rem;
+
+}
+.arrow-row{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    width: 80%;
+
+}
+.inverted{
+    transform: rotate(180deg);
+}
+
+.circle-red{
+    background-color: #fc605b;
+    border: 1px solid #c97677;
+}
+
+.circle-green{
+    background-color: #25c94c;
+    border: 1px solid #54b26c;
+}
+
+.page-nav{
+    background-color: red;
+}
+
+.circle-yellow{
+    background-color: #f9bd3d;
+    border: 1px solid #e3bd71;
+}
+
+.active{
+    background-color: #a3a3a32b;
+    border-radius: 8px;
+}
+
+.folder{
+    width: 5rem;
+}
+
+.path-icon{
+    height: 1rem;
+    margin-right: 0.4rem;
+    margin-left: 0.4rem;
+}
+
+#page-header-title{
+    font-family: "sfprobold";
+    color: #5d5e60;
+}
+
+
+
+
 
 
 

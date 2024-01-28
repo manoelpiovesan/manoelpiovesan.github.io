@@ -12,12 +12,74 @@
 
     <div class="main">
         <div class="window">
-            <div class="header">
-                
-            </div>
-            <div class="body">
-
-            </div>
+                <div class="row">
+                    <div class="col-3 sidebar">
+                        <div class="sidebar-header">
+                            <div class="circle-red"></div>
+                            <div class="circle-yellow"></div>
+                            <div class="circle-green"></div>
+                        </div>
+                        <div class="sidebar-topics">
+                            
+                            <p class="topic-title">Favoritos</p>
+                            <div class="topic-item" onclick="changeFoldersView(0)">
+                                <img src="assets/icons/person.svg" alt="" class="topic-item-icon">
+                                Sobre mim
+                            </div>
+                            <div class="topic-item" onclick="changeFoldersView(1)">
+                                <img src="assets/icons/at.svg" alt="" class="topic-item-icon">
+                                Contatos
+                            </div>
+                            <div class="topic-item" onclick="changeFoldersView(2)">
+                                <img src="assets/icons/folder.svg" alt="" class="topic-item-icon">
+                                Projetos
+                            </div>
+                            <div class="topic-item" onclick="changeFoldersView(3)">
+                                <img src="assets/icons/heart.svg" alt="" class="topic-item-icon">
+                                Hobbies
+                            </div>
+                            <div class="topic-item" onclick="changeFoldersView(4)">
+                                <img src="assets/icons/lamp.svg" alt="" class="topic-item-icon">
+                                Cursos
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-9 page">
+                        <div class="page-header">
+                            <div class="row arrow-row" style="height: 70%;">
+                                <img src="assets/icons/arrow.svg" alt="" class="page-arrow inverted" style="margin-left: 1rem;">
+                                <img src="assets/icons/arrow.svg" alt="" class="page-arrow">
+                                <span id="page-header-title">Users</span>
+                            </div>
+                        </div>
+                        <div class="page-body">
+                            <img class="folder" src="assets/images/folder.png" alt="">
+                        </div>
+                        <div class="page-body">
+                            Contatos
+                        </div>
+                        <div class="page-body">
+                            Projetos
+                        </div>
+                        <div class="page-body">
+                            Hobbies
+                        </div>
+                        <div class="page-body">
+                            Cursos
+                        </div>
+                        <div class="page-footer">
+                            <img src="assets/images/ssd.png" class="path-icon" alt="">
+                            SSD  >
+                            <img src="assets/images/folder.png" class="path-icon" alt="">
+                            Usuários  >
+                            <img src="assets/images/folder.png" class="path-icon" alt="">
+                            Manoel  > 
+                            <img src="assets/images/folder.png" class="path-icon" alt="">
+                            <span id="path-title"></span>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 

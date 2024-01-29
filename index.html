@@ -11,36 +11,38 @@
 <body>
 
     <div class="main">
-        <div class="window">
+        <div class="window" id="window">
                 <div class="row">
                     <div class="col-3 sidebar">
                         <div class="sidebar-header">
-                            <div class="circle-red"></div>
-                            <div class="circle-yellow"></div>
-                            <div class="circle-green"></div>
+                            <div class="circle-red" onclick="closeWindow()">
+                                <img src="assets/icons/cross.svg" class="header-hover" alt="">
+                            </div>
+                            <div class="circle-yellow">
+                                <img src="assets/icons/dash.png" class="header-hover" alt="">
+                            </div>
+                            <div class="circle-green">
+                                <img src="assets/icons/maximize.png" class="header-hover" alt="">
+                            </div>
                         </div>
                         <div class="sidebar-topics">
                             
                             <p class="topic-title">Favoritos</p>
                             <div class="topic-item" onclick="changeFoldersView(0)">
-                                <img src="assets/icons/person.svg" alt="" class="topic-item-icon">
+                                <img draggable="false" src="assets/icons/person.svg" alt="" class="topic-item-icon">
                                 Sobre mim
                             </div>
                             <div class="topic-item" onclick="changeFoldersView(1)">
-                                <img src="assets/icons/at.svg" alt="" class="topic-item-icon">
+                                <img draggable="false" src="assets/icons/at.svg" alt="" class="topic-item-icon">
                                 Contatos
                             </div>
                             <div class="topic-item" onclick="changeFoldersView(2)">
-                                <img src="assets/icons/folder.svg" alt="" class="topic-item-icon">
+                                <img draggable="false" src="assets/icons/folder.svg" alt="" class="topic-item-icon">
                                 Projetos
                             </div>
                             <div class="topic-item" onclick="changeFoldersView(3)">
-                                <img src="assets/icons/heart.svg" alt="" class="topic-item-icon">
-                                Hobbies
-                            </div>
-                            <div class="topic-item" onclick="changeFoldersView(4)">
-                                <img src="assets/icons/lamp.svg" alt="" class="topic-item-icon">
-                                Cursos
+                                <img draggable="false" src="assets/icons/lamp.svg" alt="" class="topic-item-icon">
+                                Conhecimentos
                             </div>
                             <br>
                         </div>
@@ -48,34 +50,155 @@
                     <div class="col-9 page">
                         <div class="page-header">
                             <div class="row arrow-row" style="height: 70%;">
-                                <img src="assets/icons/arrow.svg" alt="" class="page-arrow inverted" style="margin-left: 1rem;">
-                                <img src="assets/icons/arrow.svg" alt="" class="page-arrow">
+                                <img onclick="back()" draggable="false" src="assets/icons/arrow.svg" alt="" class="page-arrow inverted" style="margin-left: 1rem;">
+                                <img  onclick="" draggable="false" src="assets/icons/arrow.svg" alt="" class="page-arrow">
                                 <span id="page-header-title">Users</span>
                             </div>
                         </div>
-                        <div class="page-body">
-                            <img class="folder" src="assets/images/folder.png" alt="">
+                        <!--
+                            ///
+                            /// Sobre mim
+                            ///
+                        -->
+                        <div class="page-body" style="padding: 0;">
+                            <div class="row about-row">
+                                <div class="col-3">
+                                    <div class="app">
+                                        <img draggable="false" src="assets/colored_icons/preview.png" class="app-icon app-selected">
+                                        <span class="app-title app-title-selected">sobre_mim.pdf</span>
+                                    </div>
+                                </div>
+                                <div class="col-9 about-preview">
+                                    <h4><img class="emoji" src="assets/emojis/hands.png" alt=""><img class="emoji" src="assets/images/memoji.png" alt="">Olá!</h4>
+                                    <hr>
+                                    <p> Me chamo <b>Manoel</b>, sou aluno de Engenharia de Computação da <b>UERJ</b> no campus de Nova Friburgo. Atualmente sou estagiário de desenvolvimento na <b>Anlix</b>, e neste momento estudando desenvolvimento multiplataforma com Flutter e backend com Java Quarkus.</p>
+                                    <p>Além disso, sou apaixonado por tecnologia e inovação, e sempre estou buscando aprender novas tecnologias e ferramentas, desde software e sistemas à robótica e automação. Participei de alguns Hackathons representando a empresa júnior da UERJ, da qual fiz parte em 2022.</p>
+                                    <img draggable="false" src="assets/images/hackathon.jpg" style="height: 35%;" alt="">
+                                    <img draggable="false" src="assets/images/hackathon2.jpeg" style="height: 35%;" alt="">
+                                </div>
+                            </div>
                         </div>
+                        <!--
+                            ///
+                            /// Contatos
+                            ///
+                        -->
                         <div class="page-body">
-                            Contatos
+                            <div class="app-page">
+                                <a class="app" target="_blank" href="https://www.linkedin.com/in/manoelrodrigues7/">
+                                    <img draggable="false" src="assets/colored_icons/linkedin.png" class="app-icon">
+                                    <span class="app-title">LinkedIn</span>
+                                </a>
+                                <a class="app" target="_blank" href="https://github.com/manoelpiovesan">
+                                    <img draggable="false" src="assets/colored_icons/github.png" class="app-icon">
+                                    <span class="app-title">Github</span>
+                                </a>
+                                <a class="app" target="_blank" href="mailto:manoel.silva@grad.iprj.uerj.br">
+                                    <img draggable="false" src="assets/colored_icons/email.webp" class="app-icon">
+                                    <span class="app-title">E-mail</span>
+                                </a>
+                            </div>
                         </div>
+                        <!--
+                            ///
+                            /// Projetos
+                            ///
+                        -->
                         <div class="page-body">
-                            Projetos
+                            <div class="app-page">
+                                <a class="app" target="_blank" href="https://github.com/manoelpiovesan/curso-quarkus">
+                                    <img draggable="false" src="assets/project_icons/pix.png" class="app-icon">
+                                    <span class="app-title">Backend Quarkus</span>
+                                </a>
+                                <a class="app" target="_blank" href="https://github.com/manoelpiovesan/qr-vault">
+                                    <img draggable="false" src="assets/project_icons/qrvault.png" class="app-icon">
+                                    <span class="app-title">QR Vault</span>
+                                </a>
+                                <a class="app" target="_blank" href="https://manoelpiovesan.github.io/iss-tracker">
+                                    <img draggable="false" src="assets/project_icons/iss.png" class="app-icon">
+                                    <span class="app-title">ISS Tracker</span>
+                                </a>
+                                <a class="app" target="_blank" href="https://github.com/manoelpiovesan">
+                                    <img draggable="false" src="assets/colored_icons/github.png" class="app-icon">
+                                    <span class="app-title">Mais projetos</span>
+                                </a>
+                            </div>
                         </div>
+                        <!--
+                            ///
+                            /// Conhecimentos
+                            ///
+                        -->
                         <div class="page-body">
-                            Hobbies
+                            <div class="app-page">
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/quarkus-icon.svg" class="app-icon">
+                                    <span class="app-title">Quarkus</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/keycloak.png" class="app-icon">
+                                    <span class="app-title">Keycloak</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/flutter.png" class="app-icon">
+                                    <span class="app-title">Flutter</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/dart.webp" class="app-icon">
+                                    <span class="app-title">Dart</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/js.png" class="app-icon">
+                                    <span class="app-title">JavaScript</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/html.png" class="app-icon">
+                                    <span class="app-title">HTML</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/css.png" class="app-icon">
+                                    <span class="app-title">CSS</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/firebase.png" class="app-icon">
+                                    <span class="app-title">Firebase</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/git.png" class="app-icon">
+                                    <span class="app-title">Git</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/bootstrap.svg" class="app-icon">
+                                    <span class="app-title">Bootstrap</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/arduino.png" class="app-icon">
+                                    <span class="app-title">Arduino</span>
+                                </div>
+                                
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/blender.png" class="app-icon">
+                                    <span class="app-title">Blender</span>
+                                </div>
+                                <div class="app">
+                                    <img draggable="false" src="assets/colored_icons/ps.png" class="app-icon">
+                                    <span class="app-title">Photoshop</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="page-body">
-                            Cursos
-                        </div>
+                        <!--
+                            ///
+                            /// FOOTER
+                            ///
+                        -->
                         <div class="page-footer">
-                            <img src="assets/images/ssd.png" class="path-icon" alt="">
+                            <img draggable="false" src="assets/images/ssd.png" class="path-icon" alt="">
                             SSD  >
-                            <img src="assets/images/folder.png" class="path-icon" alt="">
+                            <img draggable="false" src="assets/images/folder.png" class="path-icon" alt="">
                             Usuários  >
-                            <img src="assets/images/folder.png" class="path-icon" alt="">
+                            <img draggable="false" src="assets/images/folder.png" class="path-icon" alt="">
                             Manoel  > 
-                            <img src="assets/images/folder.png" class="path-icon" alt="">
+                            <img draggable="false" src="assets/images/folder.png" class="path-icon" alt="">
                             <span id="path-title"></span>
                         </div>
                     </div>

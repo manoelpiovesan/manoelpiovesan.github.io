@@ -37,12 +37,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'sfproregular';
+    
  }
 html,body{
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    user-select: none;
     
 }
 
@@ -98,7 +100,7 @@ body{
 
 .page-header{
     background-color: #f9fafc;
-    height: 10%;
+    height: 8vh;
     border-bottom: 1px solid #e3e4e5;
     font-family: 'sfproregular';
     border-top-right-radius: 12px;
@@ -109,14 +111,30 @@ body{
 
 .page-body{
     background-color: #fff;
-    height: 84%;
+    height: 67.2vh;
     padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: start !important;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
 
+.app-page{
+    height: fit-content;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 62.7vh;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
 }
 
 .page-footer{
     background-color: #f9fafc;
-    height: 6%;
+    height: 4.8vh;
     border-top: 1px solid #e3e4e5;
     border-bottom-right-radius: 12px;
     padding-left: 0.5rem;
@@ -214,6 +232,12 @@ body{
     border: 1px solid #54b26c;
 }
 
+.circle-green, .circle-red, .circle-yellow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .page-nav{
     background-color: red;
 }
@@ -243,6 +267,105 @@ body{
     color: #5d5e60;
 }
 
+.app{
+    width: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-family: "sfproregular";
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.app-icon{
+    max-height: 4.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.app-title{
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #121212;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #121212;
+}
+
+.about-row{
+    width: 100%;
+    height: 100%;
+}
+
+.about-preview{
+    border-left: 1px solid #e3e4e5;
+    padding: 1rem;
+    max-height: 100%;
+    overflow: auto;
+}
+
+
+.emoji{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.about-preview h4{
+    font-family: "sfprobold";
+}
+
+.app-selected{
+    background-color: #cfcfcf8d;
+    border-radius: 8px;
+    padding: 0.2rem;
+}
+
+.app-title-selected{
+    background-color: #0e5cc8;
+    color: #e0e7f1;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 10px;
+
+}
+
+.header-hover{
+    width: 80%;
+    opacity: 0;
+}
+
+.header-hover:hover{
+    opacity: 0.6;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+    border-radius: 10px; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #88888890; 
+    border-radius: 10px; 
+    }
+  
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
 
 
 
